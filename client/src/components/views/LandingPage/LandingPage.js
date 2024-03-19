@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import Axios from 'axios';
 import { Icon, Col, Card, Row } from 'antd';
 import ImageSlider from '../../utils/ImageSlider';
@@ -66,7 +67,7 @@ function LandingPage() {
         return <Col lg={6} md={8} xs={24}>
             <Card
                 hoverable={true}
-                cover={<a href={`/product/${product._id}`} > <ImageSlider images={product.images} /></a>}
+                cover={<Link to={`/product/${product._id}`} > <ImageSlider images={product.images} /></Link>}
             >
                 <Meta
                     title={product.title}
