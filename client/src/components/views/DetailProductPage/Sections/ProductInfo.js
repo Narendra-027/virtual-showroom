@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import { Button, Descriptions } from 'antd';
 import { useSelector } from "react-redux";
 
@@ -30,9 +31,9 @@ function ProductInfo(props) {
                 <br />
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <Button size="large" shape="round" type="danger"
-                        href='/login'
+                        // href='/login'
                     >
-                        Add to Cart
+                        <Link to='/login'>Add to Cart</Link>
                         </Button>
                 </div>
             </div>
