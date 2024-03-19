@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, Icon, Badge } from 'antd';
 import axios from 'axios';
 import { USER_SERVER } from '../../../Config';
@@ -23,10 +24,10 @@ function RightMenu(props) {
     return (
       <Menu mode={props.mode}>
         <Menu.Item key="mail">
-          <a href="/login">Login</a>
+          <Link to="/login">Login</Link>
         </Menu.Item>
         <Menu.Item key="app">
-          <a href="/register">Signup</a>
+          <Link to="/register">Signup</Link>
         </Menu.Item>
       </Menu>
     )
@@ -40,7 +41,7 @@ function RightMenu(props) {
           </Menu.Item> */}
   
           <Menu.Item key="upload">
-            <a href="/product/upload">Upload</a>
+            <Link to="/product/upload">Upload</Link>
           </Menu.Item>
   
           {/* <Menu.Item key="cart" style={{ paddingBottom: 3 }}>
@@ -62,7 +63,7 @@ function RightMenu(props) {
         <Menu mode={props.mode}>
   
           <Menu.Item key="history">
-            <a href="/history">My Purchases</a>
+            <Link to="/history">My Purchases</Link>
           </Menu.Item>
   
           {/* <Menu.Item key="upload">
@@ -71,9 +72,9 @@ function RightMenu(props) {
   
           <Menu.Item key="cart" style={{ paddingBottom: 3 }}>
             <Badge count={user.userData && user.userData.cart.length}>
-              <a href="/user/cart" style={{ marginRight: -22 , color:'#667777'}}>
+              <Link to="/user/cart" style={{ marginRight: -22 , color:'#667777'}}>
                 <Icon type="shopping-cart" style={{ fontSize: 30, marginBottom: 3 }} />
-              </a>
+              </Link>
             </Badge>
           </Menu.Item>
   
